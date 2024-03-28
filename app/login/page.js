@@ -1,6 +1,9 @@
+'use client'
+
 import React from 'react'
 import {FormEvent} from 'react'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
+import { LoginComponent } from '@/components/LoginComponent'
 
 
 // import { LoginComponent } from '../../components/LoginComponent'
@@ -23,20 +26,23 @@ export default function Login() {
             },
             body: JSON.stringify({email, password})
         })
-        }
-    if (response.ok) {
+        
+        if (response.ok) {
         router.push('/dashboard')
-    }
-    if (!response.ok){
+     }
+        if (!response.ok){
         alert('Falha no login')
     }
   
+    }
   return (
-    <form onSubmit={handleSubmit}>
-        <input type="email" name="email" placeholder="Email" required />
-        <input type="password" name="password" placeholder="Password" required />
-        <button type="submit">Login</button>
-    </form>
+    // <form onSubmit={handleSubmit}>
+    //     <input type="email" name="email" placeholder="Email" required />
+    //     <input type="password" name="password" placeholder="Password" required />
+    //     <button type="submit">Login</button>
+    // </form>
+
+    <LoginComponent />
   )
 }
 
