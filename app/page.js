@@ -5,10 +5,11 @@ import { Button } from "@/components/ui/button"
 import { LoginComponent } from '@/components/LoginComponent'
 
 
+
 export default function Home() {
 
   const handleSignIn = async () => {
-    await signIn("github", {callbackUrl: "http://localhost:3000/orders"})
+    await signIn("github", {callbackUrl: "/orders"})
   }
 
 
