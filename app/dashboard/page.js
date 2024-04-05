@@ -160,6 +160,7 @@ export default function Dashboard() {
             <CardHeader>
               <CardTitle>Sell BTC</CardTitle>
             </CardHeader>
+            {/* TODO: #1 Implementar card de compra e venda */}
             <CardContent>
               <form className="flex flex-col gap-4 md:flex-row md:items-center md:gap-2 lg:gap-4">
                 <div className="flex flex-col gap-1">
@@ -188,8 +189,8 @@ export default function Dashboard() {
           </CardHeader>
           <CardContent>
             <div className="grid gap-2 text-sm">
-              <div>USD Balance</div>
-              <div>BTC Balance</div>
+              <div>USD Balance : 1000 usd</div>
+              <div>BTC Balance : 1.50 btc </div>
             </div>
           </CardContent>
         </Card>
