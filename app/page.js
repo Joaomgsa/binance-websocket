@@ -2,6 +2,7 @@
 import React from 'react'
 import {signIn} from 'next-auth/react'
 import { Button } from "@/components/ui/button"
+import { LoginComponent } from '@/components/LoginComponent'
 
 
 export default function Home() {
@@ -13,7 +14,8 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h2> Binance - book </h2>
+      <h2> Binance - Project </h2>
+      <LoginComponent />
       <Button onClick={handleSignIn}>
         Sign in with GitHub
       </Button>
